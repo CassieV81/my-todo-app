@@ -2,5 +2,15 @@
 <h3 class="text-center">My Todo List</h3>
 
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let todo of todos">{{ todo.name }}</li>
+  <li class="list-group-item" *ngFor="let todo of todoService.todos">
+    <div class="row">
+      <div class="col-9">{{ todo.name }}</div>
+      <div class="col-3">
+        <button class="btn btn-sm btn-primary mr-2">Edit</button>
+        <button class="btn btn-sm btn-danger mr-2">Delete</button>
+        <button class="btn btn-sm btn-success float-right">Complete</button>
+      </div>
+    </div>
+  </li>
 </ul>
+

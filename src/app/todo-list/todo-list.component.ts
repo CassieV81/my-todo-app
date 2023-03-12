@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Todo } from '../todo';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,9 +8,6 @@ import { Todo } from '../todo';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent {
-  todos: Todo[] = [
-    {id: 1, name: "Buy Groceries", completed: false},
-    {id: 2, name: "Clean the house", completed: true},
-    {id: 3, name: "Do Laundry", completed: false}
-  ];
+  
+  constructor(public todoService: TodoService) {};
 }
