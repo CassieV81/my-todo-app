@@ -1,6 +1,6 @@
 
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Add Todo" [(ngModel)]="newTodoName" >
+  <input type="text" class="form-control" placeholder="Add Todo" [(ngModel)]="newTodoName" #todoInput>
   <div class="input-group-btn">
     <button class="btn btn-outline-secondary" type="button" (click)="addTodo()">Add</button>
   </div>
