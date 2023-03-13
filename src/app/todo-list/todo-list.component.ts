@@ -23,7 +23,18 @@ export class TodoListComponent {
       this.todoService.deleteTodoById(todo.id);
     }
   }
-  markComplete(todo: Todo) {
-    this.todoService.markComplete(todo);
-  }
+  markComplete(todo: Todo, target: EventTarget | null) {
+    if (target instanceof HTMLElement) {
+      this.todoService.markComplete(todo);
+      if (target.classList.contains('btn-secondary')) {
+        target.classList.remove('btn-secondary');
+        target.classList.add('btn-success');
+      } else {
+        target.classList.remove('btn-success');
+        target.classList.add('btn-secondary');
+      }
+    }
+  }  
+ 
+  
 }

@@ -10,7 +10,7 @@ export class TodoService {
 
   todos: Todo[] = [
     { id: 1, name: 'Buy groceries', completed: false},
-    { id: 2, name: 'Do laundry', completed: true},
+    { id: 2, name: 'Do laundry', completed: false},
     { id: 3, name: 'Clean the house', completed: false}
   ];
 
