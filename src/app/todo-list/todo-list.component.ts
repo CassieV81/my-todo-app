@@ -24,6 +24,6 @@ export class TodoListComponent {
     }
   }
   markComplete(todo: Todo) {
-
+    this.todoService.markComplete(todo);
   }
 }
